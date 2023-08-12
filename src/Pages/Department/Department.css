@@ -1,16 +1,16 @@
-.departments_wrapper{
-    
-        display: flex;
-        gap:  1rem;
-    
+.dept_cards_container {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
 }
 
-.dept-cont{
-    text-align: center;
-    font-size: x-large;
-    font-weight: bolder;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px 5px 2px gray;
-    padding: 0rem 2rem;
-    border-radius: 0.5rem;
+.dept-cont {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px 2px gray;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
