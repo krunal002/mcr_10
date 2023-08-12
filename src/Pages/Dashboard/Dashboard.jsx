@@ -1,6 +1,6 @@
 import "./Dashboard.css"
 import { useContext } from "react";
-import { DataContext } from "../../InventoryManagement";
+import { DataContext } from "../../App";
 
 const Dashboard = () => {
   const { ProductData } = useContext(DataContext);
