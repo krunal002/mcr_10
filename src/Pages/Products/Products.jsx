@@ -1,5 +1,6 @@
 import "./Product.css"
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
@@ -47,6 +48,7 @@ const Products = () => {
             <TableRow>
               <StyledTableCell align="left">Image</StyledTableCell>
               <StyledTableCell align="left">Name</StyledTableCell>
+              
               <StyledTableCell align="left">Description</StyledTableCell>
               <StyledTableCell align="left">Price</StyledTableCell>
               <StyledTableCell align="left">9 Stock</StyledTableCell>
@@ -64,7 +66,14 @@ const Products = () => {
                     alt={product.name}
                   />
                 </StyledTableCell>
-                <StyledTableCell align="left">{product.name}</StyledTableCell>
+
+
+
+
+                <Link to={`/details/${product.id}`}><StyledTableCell align="left">{product.name}</StyledTableCell></Link>
+                
+
+
                 <StyledTableCell align="left">
                   {product.description}
                 </StyledTableCell>

@@ -4,6 +4,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Department from "./Pages/Department/Department";
 import Products from "./Pages/Products/Products";
 import Sidebar from "./Componets/Sidebar/Sidebar";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 import { DataContext } from "./Context/DataContext";
 export { DataContext };
@@ -19,6 +20,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/department" element={<Department />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/details/:ProductId" element={<ProductDetails />} />
         </Routes>
       </div>
     </div>
