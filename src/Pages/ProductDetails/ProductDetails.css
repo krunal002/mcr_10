@@ -1,0 +1,13 @@
+.product-details-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 1rem;
+}
+.productImage {
+  width: 500px;
+  height: 500px;
+}
+
+.product-info {
+  font-size: large;
+}
