@@ -11,7 +11,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
 import { DataContext } from "../../App";
-import Navigation from "../../Componets/Navigation/Navigation";
+import Filters from "../../Componets/Filters";
+// import Navigation from "../../Componets/Navigation/Navigation";
 
 // import { Paper } from "@mui/material";
 
@@ -36,12 +37,42 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const Products = () => {
-  const { ProductData } = useContext(DataContext);
-  // console.log(productData)
+  const { ProductData, filters } = useContext(DataContext);
+
+
+
+
+  const productsDataByDept =
+        filters.dept_type === "all"
+            ? ProductData
+            : ProductData.filter(
+                  (product) =>
+                      product.department.toLowerCase() ===
+                      filters.dept_type.toLowerCase()
+              );
+
+    const productsDataBySort =
+        filters.sortBy === "name"
+            ? [...productsDataByDept].sort((a, b) =>
+                  a.name.localeCompare(b.name)
+              )
+            : filters.sortBy === "price"
+            ? [...productsDataByDept].sort((a, b) => a.price - b.price)
+            : filters.sortBy === "stock"
+            ? [...productsDataByDept].sort((a, b) => a.stock - b.stock)
+            : productsDataByDept;
+
+    const productsDataByCheckBox =
+        filters.low_stock_items === true
+            ? productsDataBySort.filter((product) => product.stock <= 10)
+            : productsDataBySort;
+
+
+
 
   return (
     <div className="departments_wrapper">
-      <Navigation />
+      <Filters/>
       <TableContainer>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -57,7 +88,8 @@ const Products = () => {
           </TableHead>
           <TableBody>
 
-            {ProductData.map((product) => (
+
+            {productsDataByCheckBox.map((product) => (
               <StyledTableRow key={product.id}>
                 <StyledTableCell component="th" scope="row">
                   <img

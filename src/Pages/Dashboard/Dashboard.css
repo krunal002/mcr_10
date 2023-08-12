@@ -8,7 +8,10 @@
 }
 
 .dashboard-items{
+    text-align: center;
+    font-size: x-large;
     font-weight: bolder;
-    background-color: whitesmoke;
-    padding: 1rem 2rem;
+    background-color: antiquewhite;
+    padding: 0rem 2rem;
+    border-radius: 0.5rem;
 }

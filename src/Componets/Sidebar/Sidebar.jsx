@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
-      <NavLink to="/dashboard">Dashboard</NavLink>
-      <NavLink to="/department">Department</NavLink>
-      <NavLink to="/products">Products</NavLink>
+      <NavLink to="/dashboard" className="navlink">Dashboard</NavLink>
+      <NavLink to="/department" className="navlink">Department</NavLink>
+      <NavLink to="/products" className="navlink">Products</NavLink>
     </div>
   );
 };

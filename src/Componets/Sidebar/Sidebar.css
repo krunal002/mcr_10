@@ -1,4 +1,12 @@
 .sidebar-container{
+    
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+}
+.navlink{
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
 }
