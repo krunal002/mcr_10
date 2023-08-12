@@ -18,7 +18,7 @@ function App() {
       </aside>
       <div className="right-container">
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/department" element={<Department />} />
           <Route path="/products" element={<Products />} />
           <Route path="/details/:ProductId" element={<ProductDetails />} />
