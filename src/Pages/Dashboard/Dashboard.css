@@ -1,0 +1,14 @@
+.dashboard-container{
+    padding: 1rem;
+    
+}
+.dashboard-container main {
+    display: flex;
+    gap:  1rem;
+}
+
+.dashboard-items{
+    font-weight: bolder;
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+}
